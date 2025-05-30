@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Asana Video</title>
+</head>
+<body>
+<h2>Update Asana Video and Image</h2>
+
+<form id="updateForm">
+    <label for="videoId">Video ID (to update):</label>
+    <input type="text" id="videoId" name="videoId" required>
+    <br><br>
+
+    <label for="asanaName">Asana Name:</label>
+    <input type="text" id="asanaName" name="asanaName" required>
+    <br><br>
+
+    <label for="asanaCode">Category:</label>
+    <input type="text" id="asanaCode" name="asanaCode" required>
+    <br><br>
+
+    <label for="asanaDescription">Asana Description:</label>
+    <input type="text" id="asanaDescription" name="asanaDescription" required>
+    <br><br>
+
+    <label for="asanaVideo">Asana Video:</label>
+    <input type="file" id="asanaVideo" name="asanaVideo" accept="video/*">
+    <br><br>
+
+    <label for="asanaImage">Asana Image:</label>
+    <input type="file" id="asanaImage" name="asanaImage" accept="image/*">
+    <br><br>
+
+    <button type="submit">Update</button>
+</form>
+
+<script>
+    document.getElementById('updateForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const id = document.getElementById('videoId').value;
+        const formData = new FormData(this);
+
+        fetch(`http://localhost:8081/api/videos/${id}`, {
+            method: 'PUT',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Video updated successfully!');
+            } else {
+                alert('Failed to update video.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error updating video.');
+        });
+    });
+</script>
+</body>
+</html>
