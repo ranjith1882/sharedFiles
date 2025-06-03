@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "05bd2cbe-12b0-41f2-a2b8-5e0029654f2f",
+		"name": "EmpowerMent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3645372"
+	},
+	"item": [
+		{
+			"name": "User Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user",
+							"value": "{  \"gender\": \"MALE\",  \"level\": \"Poor\",  \"healthNotes\": \"Masala\",  \"goalIds\": [    3,2  ],  \"subscribeExpiryDate\": \"2025-05-26T17:40:53.560Z\",  \"city\": \"New Jersy\",  \"mobileNumber\": 9191919191,  \"name\": \"U8S1T7\",  \"otherNotes\": \"other\",  \"status\": \"APPROVED\",  \"stayType\": \"On Road\",  \"online\": false,  \"subscribeDate\": \"2025-05-26T17:40:53.561Z\",  \"availability\": \"Any Time\",  \"password\": \"test\",  \"email\": \"U8S1T7@begger.com\",  \"mealType\": \"Any thing\",  \"hcIds\": [    2,1  ],  \"age\": 30, \"trainerId\": 22}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/ranji/OneDrive/Desktop/IMG_5258.PNG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trainer Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "trainerInfo",
+							"value": "{\"studentLimit\": 10,  \"gender\": \"FEMALE\",  \"experience\": \"Inetrm\",  \"subscribeExpiryDate\": \"2025-05-27T14:53:54.389Z\",  \"city\": \"Bengalore\",  \"mobileNumber\": 6666666666,  \"name\": \"InfoTrainer2\",  \"information\": \"Trainer\",  \"style\": \"Styloooo\",  \"status\": \"PENDING\",  \"subscribeDate\": \"2025-05-27T14:53:54.390Z\",  \"availability\": \"Evening\",  \"password\": \"test\",  \"email\": \"InfoTrainer2@test.com\",  \"age\": 35, \"studioId\": 1}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "certificate",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "certificate",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/trainer/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"trainer",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "videos upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "asanaName",
+							"value": "Enjoy",
+							"type": "text"
+						},
+						{
+							"key": "asanaCode",
+							"value": "Sport",
+							"type": "text"
+						},
+						{
+							"key": "asanaDescription",
+							"value": "Enjoy",
+							"type": "text"
+						},
+						{
+							"key": "asanaVideo",
+							"type": "file",
+							"src": "/E:/work/Bhosmatech/sharedFiles/video/t2.mp4"
+						},
+						{
+							"key": "asanaImage",
+							"type": "file",
+							"src": "/C:/Users/ranji/OneDrive/Desktop/IMG_5258.PNG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/videos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
